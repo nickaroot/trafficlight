@@ -12,22 +12,40 @@
     <script src="js/main.min.js"></script>
   </head>
   <body>
+    <section class="levelContainer animated bounceInRight">
+      <p class="level">Неизвестно</p>
+    </section>
     <section class="trafficLightContainer animated bounceInDown">
-      <section class="leftHolder"></section>
+      <section class="animationHolder"></section>
+      <section class="topHolder"></section>
+      <section class="middleHolder"></section>
+      <section class="bottomHolder"></section>
       <section class="trafficLight">
-        <div id="redMain" class="lightContainer redDeactiveMain">
-          <div class="lightClip">
-            <div id="redAdd" class="light redDeactiveAdd"></div>
+        <div class="grayLightContainer">
+          <div class="lightContainerElement">
+            <div id="redMain" class="lightContainer redDeactiveMain">
+              <div class="lightClip">
+                <div id="redAdd" class="light redDeactiveAdd"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="yellowMain" class="lightContainer yellowFlashingMain">
-          <div class="lightClip">
-            <div id="yellowAdd" class="light yellowFlashingAdd"></div>
+        <div class="grayLightContainer">
+          <div class="lightContainerElement">
+            <div id="yellowMain" class="lightContainer yellowFlashingMain">
+              <div class="lightClip">
+                <div id="yellowAdd" class="light yellowFlashingAdd"></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="greenMain" class="lightContainer greenDeactiveMain">
-          <div class="lightClip">
-            <div id="greenAdd" class="light greenDeactiveAdd"></div>
+        <div class="grayLightContainer">
+          <div class="lightContainerElement">
+            <div id="greenMain" class="lightContainer greenDeactiveMain">
+              <div class="lightClip">
+                <div id="greenAdd" class="light greenDeactiveAdd"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

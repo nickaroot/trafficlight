@@ -4,13 +4,15 @@ $yellowActiveMain: rgb(227, 169, 0)
 $yellowActiveAdd: rgb(234, 184, 0)
 $greenActiveMain: rgb(50, 160, 85)
 $greenActiveAdd: rgb(53, 170, 93)
-$darkenCoeff: 30%
+$darkenCoeff: 10%
 $redDeactiveMain: darken($redActiveMain, $darkenCoeff)
 $redDeactiveAdd: darken($redActiveAdd, $darkenCoeff)
 $yellowDeactiveMain: darken($yellowActiveMain, $darkenCoeff)
 $yellowDeactiveAdd: darken($yellowActiveAdd, $darkenCoeff)
 $greenDeactiveMain: darken($greenActiveMain, $darkenCoeff)
 $greenDeactiveAdd: darken($greenActiveAdd, $darkenCoeff)
+$grayMain: rgb(41, 57, 76)
+$grayAdd: rgb(26, 38, 47)
 
 *
 	margin: 0
@@ -23,7 +25,7 @@ $greenDeactiveAdd: darken($greenActiveAdd, $darkenCoeff)
 	background-color: $greenActiveMain !important
 body
 	font-size: .9em
-	background-color: rgb(26, 38, 47)
+	background-color: $grayAdd
 	transition: all 1s;
 	overflow: hidden
 	
@@ -32,24 +34,22 @@ body
 
 	.road
 		position: absolute
-		background-color: rgb(41, 57, 76)
-		bottom: -5%
-		left: -5%
-		right: -5%
-		padding: 15% 0 5% 0
-		transform: rotateZ(-2deg)
-		@media (min-width: 320px) and (max-width: 500px)
-			padding: 60% 0 5% 0
+		//background-color: $grayMain
+		background: linear-gradient(to right, $grayMain 0%, $grayAdd 100%)
+		bottom: -50px
+		left: -50px
+		right: -50px
+		padding: 200px 0 100px 0
 
 	.car_1
 		position: relative
-		//background-color: rgb(26, 38, 47)
+		//background-color: $grayAdd
 		left: 40%
 		width: 150px
-		padding-top: 10%
-		margin-top: -10%
+		padding-top: 150px
+		margin-top: -150px
 		text-indent: -9999px;
-		background-image: url(/img/car.svg)
+		background-image: url(../img/car.svg)
 		background-size: 150px
 		background-repeat: repeat-x
 		//animation-name: carDriving
@@ -60,13 +60,13 @@ body
 			margin-top: -50%
 	.car_2
 		position: relative
-		//background-color: rgb(26, 38, 47)
+		//background-color: $grayAdd
 		left: 40%
 		width: 150px
-		padding-top: 10%
-		margin-top: -10%
+		padding-top: 150px
+		margin-top: -150px
 		text-indent: -9999px;
-		background-image: url(/img/minivan.svg)
+		background-image: url(../img/minivan.svg)
 		background-size: 150px
 		background-repeat: repeat-x
 		//animation-name: carDriving
@@ -77,13 +77,13 @@ body
 			margin-top: -50%
 	.car_3
 		position: relative
-		//background-color: rgb(26, 38, 47)
+		//background-color: $grayAdd
 		left: 40%
 		width: 150px
-		padding-top: 10%
-		margin-top: -10%
+		padding-top: 150px
+		margin-top: -150px
 		text-indent: -9999px;
-		background-image: url(/img/car-3.svg)
+		background-image: url(../img/car-3.svg)
 		background-size: 150px
 		background-repeat: repeat-x
 		//animation-name: carDriving
@@ -94,13 +94,13 @@ body
 			margin-top: -50%
 	.car_4
 		position: relative
-		//background-color: rgb(26, 38, 47)
+		//background-color: $grayAdd
 		left: 40%
 		width: 150px
-		padding-top: 10%
-		margin-top: -10%
+		padding-top: 150px
+		margin-top: -150px
 		text-indent: -9999px;
-		background-image: url(/img/taxi.svg)
+		background-image: url(../img/taxi.svg)
 		background-size: 150px
 		background-repeat: repeat-x
 		//animation-name: carDriving
@@ -111,13 +111,13 @@ body
 			margin-top: -50%
 	.car_5
 		position: relative
-		//background-color: rgb(26, 38, 47)
+		//background-color: $grayAdd
 		left: 40%
 		width: 150px
-		padding-top: 10%
-		margin-top: -10%
+		padding-top: 150px
+		margin-top: -150px
 		text-indent: -9999px;
-		background-image: url(/img/car-5.svg)
+		background-image: url(../img/car-5.svg)
 		background-size: 150px
 		background-repeat: repeat-x
 		//animation-name: carDriving
@@ -128,13 +128,13 @@ body
 			margin-top: -50%
 	.car_6
 		position: relative
-		//background-color: rgb(26, 38, 47)
+		//background-color: $grayAdd
 		left: 40%
 		width: 150px
-		padding-top: 10%
-		margin-top: -10%
+		padding-top: 150px
+		margin-top: -150px
 		text-indent: -9999px;
-		background-image: url(/img/car-6.svg)
+		background-image: url(../img/car-6.svg)
 		background-size: 150px
 		background-repeat: repeat-x
 		animation-iteration-count: infinite
@@ -259,59 +259,95 @@ body
 			animation-duration: 10s
 			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
 			z-index: 1006;
+	.levelContainer
+		position: absolute
+		top: 0
+		right: 0
+		margin: 10px
+		background-color: $grayAdd
+		width: 100px
+		padding: 12px 5px
+		border-radius: 4px
+		.level
+			color: #fff
+			text-align: center
+	.trafficLightContainer
+		margin: 0 10px
 	.trafficLight
 		clear: both
 		float: left
-		background-color: rgb(41, 57, 76)
-		box-shadow: 0 1px 0 0 rgb(26, 38, 47), 0 0 0 1px rgb(26, 38, 47)
-		min-width: 150px
-		max-width: 220px
-		width: 20%
-		border-radius: 50px
-		padding: 1%
-		margin: 0 1%
-		@media (min-width: 320px) and (max-width: 500px)
-			max-width: 250px
-			width: 80%
-			padding: 4%
-			margin: 0 2%
-	
-	.leftHolder
-		float: left
+		background-color: $grayMain
+		box-shadow: 0 1px 0 0 $grayAdd, 0 0 0 1px $grayAdd
+		width: 220px
+		border-radius: 10px
+		padding: 12px 14px
+		z-index: 909
+	.animationHolder
 		position: relative
-		background-color: rgb(26, 38, 47)
-		width: 3%
-		padding-top: 10%
-		margin-top: -8%
-		margin-left: 8%
-		@media (min-width: 320px) and (max-width: 500px)
-			width: 15%
-			padding-top: 15%
-			margin-top: -8%
-			margin-left: 20%
-
+		background-color: $grayAdd
+		width: 80px
+		height: 200px
+		margin-left: 90px
+		margin-top: -190px
+		border-top-left-radius: 80px
+		border-top-right-radius: 80px
+	.topHolder
+		position: relative
+		background-color: $grayMain
+		width: 160px
+		height: 2.5px
+		border-radius: 5px 5px 0 0
+		margin-left: 45px
+	.middleHolder
+		position: relative
+		background-color: $grayMain
+		width: 200px
+		height: 5px
+		border-radius: 10px 10px 0 0
+		margin-left: 22.5px
+	.bottomHolder
+		position: relative
+		background-color: $grayMain
+		width: 220px
+		height: 5px
+		border-radius: 5px 5px 0 0
+		margin-left: 12.5px
+		z-index: 908
+	.grayLightContainer
+		position: relative
+		float: left
+		background-color: $grayAdd
+		width: 60px
+		height: 60px
+		margin: 0 6.66px
+		border-radius: 10px
+	.lightContainerElement
+		position: relative
+		width: 40px
+		height: 40px
+		margin: 10px
+		border-top: 5px $grayMain solid
+		border-radius: 100%
+		transform: rotateZ(-20deg) translateY(-5px)
 	.lightContainer
 		position: relative
 		float: left
 		background-color: #edf1f5
-		box-shadow: 0 1px 0 0 rgb(26, 38, 47), 0 0 0 1px rgb(26, 38, 47)
-		width: 20%
-		padding-top: 20%
+		box-shadow: 0 1px 0 0 $grayAdd, 0 0 0 1px $grayAdd
+		width: 40px
+		height: 40px
 		border-radius: 100%
-		margin: 0 6.66%
-		transform: rotateZ(45deg)
+		transform: rotateZ(65deg)
 		transition: all 1s;
 		.lightClip
 			position: relative
-			width: 50%;
-			padding-top: 100%
-			margin-top: -100%
+			width: 20px
+			height: 40px
 			overflow: hidden
 			.light
 				position: relative
-				width: 200%
-				padding-top: 200%
-				margin-top: -200%
+				width: 40px
+				height: 40px
 				border-radius: 100% 0 0 100%
 				transition: all 1s;
 	.redActiveMain

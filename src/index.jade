@@ -11,18 +11,29 @@ html(lang="en")
 		script(src='js/jquery.min.js')
 		script(src='js/main.min.js')
 	body
+		section.levelContainer.animated.bounceInRight
+			p.level Неизвестно
 		section.trafficLightContainer.animated.bounceInDown
-			section.leftHolder
+			section.animationHolder
+			section.topHolder
+			section.middleHolder
+			section.bottomHolder
 			section.trafficLight
-				div.lightContainer.redDeactiveMain#redMain
-					div.lightClip
-						div.light.redDeactiveAdd#redAdd
-				div.lightContainer.yellowFlashingMain#yellowMain
-					div.lightClip
-						div.light.yellowFlashingAdd#yellowAdd
-				div.lightContainer.greenDeactiveMain#greenMain
-					div.lightClip
-						div.light.greenDeactiveAdd#greenAdd
+				div.grayLightContainer
+					div.lightContainerElement
+						div.lightContainer.redDeactiveMain#redMain
+							div.lightClip
+								div.light.redDeactiveAdd#redAdd
+				div.grayLightContainer
+					div.lightContainerElement
+						div.lightContainer.yellowFlashingMain#yellowMain
+							div.lightClip
+								div.light.yellowFlashingAdd#yellowAdd
+				div.grayLightContainer
+					div.lightContainerElement
+						div.lightContainer.greenDeactiveMain#greenMain
+							div.lightClip
+								div.light.greenDeactiveAdd#greenAdd
 		section.road#road_1
 			section.car_1(style="left:10%")
 		section.road#road_2

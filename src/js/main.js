@@ -4,7 +4,7 @@ function parseStatus(url) {
 	$.ajax({
 		method: "POST",
 		url: url,
-		data: { name: "John", location: "Boston" }
+		data: null
 	})
 	.done(function(msg) {
 		var msgFormatted = msg.substring(36).slice(0, -2);
@@ -26,9 +26,12 @@ function selectMoscow(json) {
 }
 
 function updateStatus(region) {
+	var levels = ["Неизветно", "1 балл", "2 балла", "3 балла", "4 балла", "5 баллов", "6 баллов", "7 баллов", "8 баллов", "9 баллов", "10 баллов"];
 	var level = region.level;
 	var road = 0;
 	var style = region.style;
+
+	$(".level").text(levels[level-1]);
 	
 	if (level >= 0 && level <= 1) {
 		road = 1;
@@ -77,10 +80,12 @@ function activateLight(color) {
 			$("#"+item+"Main").removeClass(item+"DeactiveMain").removeClass(item+"FlashingMain").addClass(item+"ActiveMain");
 			$("#"+item+"Add").removeClass(item+"DeactiveAdd").removeClass(item+"FlashingAdd").addClass(item+"ActiveAdd");
 			$("body").addClass(item+"ActiveBody");
+			$(".levelContainer").addClass(item+"DeactiveMain");
 		} else {
 			$("#"+item+"Main").removeClass(item+"ActiveMain").removeClass(item+"FlashingMain").addClass(item+"DeactiveMain");
 			$("#"+item+"Add").removeClass(item+"ActiveAdd").removeClass(item+"FlashingAdd").addClass(item+"DeactiveAdd");
 			$("body").removeClass(item+"ActiveBody");
+			$(".levelContainer").removeClass(item+"DeactiveMain");
 		}
 	});
 	console.log(color+" is activated");
