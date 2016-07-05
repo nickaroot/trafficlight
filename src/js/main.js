@@ -31,7 +31,7 @@ function updateStatus(region) {
 	var road = 0;
 	var style = region.style;
 
-	$(".level").text(levels[level-1]);
+	$(".level").text(levels[level]);
 	
 	if (level >= 0 && level <= 1) {
 		road = 1;
