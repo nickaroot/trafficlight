@@ -26,7 +26,7 @@ function selectMoscow(json) {
 }
 
 function updateStatus(region) {
-	var levels = ["Неизветно", "1 балл", "2 балла", "3 балла", "4 балла", "5 баллов", "6 баллов", "7 баллов", "8 баллов", "9 баллов", "10 баллов"];
+	var levels = ["0 баллов", "1 балл", "2 балла", "3 балла", "4 балла", "5 баллов", "6 баллов", "7 баллов", "8 баллов", "9 баллов", "10 баллов"];
 	var level = region.level;
 	var road = 0;
 	var style = region.style;
@@ -80,12 +80,12 @@ function activateLight(color) {
 			$("#"+item+"Main").removeClass(item+"DeactiveMain").removeClass(item+"FlashingMain").addClass(item+"ActiveMain");
 			$("#"+item+"Add").removeClass(item+"DeactiveAdd").removeClass(item+"FlashingAdd").addClass(item+"ActiveAdd");
 			$("body").addClass(item+"ActiveBody");
-			$(".levelContainer").addClass(item+"DeactiveMain");
+			$(".levelContainer").addClass(item+"ActiveAdd");
 		} else {
 			$("#"+item+"Main").removeClass(item+"ActiveMain").removeClass(item+"FlashingMain").addClass(item+"DeactiveMain");
 			$("#"+item+"Add").removeClass(item+"ActiveAdd").removeClass(item+"FlashingAdd").addClass(item+"DeactiveAdd");
 			$("body").removeClass(item+"ActiveBody");
-			$(".levelContainer").removeClass(item+"DeactiveMain");
+			$(".levelContainer").removeClass(item+"ActiveAdd");
 		}
 	});
 	console.log(color+" is activated");
