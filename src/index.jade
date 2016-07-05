@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+	head
+		meta(http-equiv="content-type", content="#{contentType}; charset=UTF-8")
+		title="Traffic Light"
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic-ext,cyrillic")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css")
+		link(rel="stylesheet", href="css/normalize.min.css")
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src='js/jquery.min.js')
+		script(src='js/main.min.js')
+	body
+		section.trafficLightContainer.animated.bounceInDown
+			section.leftHolder
+			section.trafficLight
+				div.lightContainer.redDeactiveMain#redMain
+					div.lightClip
+						div.light.redDeactiveAdd#redAdd
+				div.lightContainer.yellowFlashingMain#yellowMain
+					div.lightClip
+						div.light.yellowFlashingAdd#yellowAdd
+				div.lightContainer.greenDeactiveMain#greenMain
+					div.lightClip
+						div.light.greenDeactiveAdd#greenAdd
+		section.road#road_1
+			section.car_1(style="left:10%")
+		section.road#road_2
+			section.car_1(style="left:10%")
+			section.car_2(style="left:70%")
+		section.road#road_3
+			section.car_1(style="left:10%")
+			section.car_2(style="left:45%")
+			section.car_3(style="left:80%")
+		section.road#road_4
+			section.car_1(style="left:10%")
+			section.car_2(style="left:30%")
+			section.car_3(style="left:55%")
+			section.car_4(style="left:80%")
+		section.road#road_5
+			section.car_1(style="left:10%")
+			section.car_2(style="left:30%")
+			section.car_3(style="left:50%")
+			section.car_4(style="left:65%")
+			section.car_5(style="left:80%")
+		section.road#road_6
+			section.car_1(style="left:5%")
+			section.car_2(style="left:20%")
+			section.car_3(style="left:35%")
+			section.car_4(style="left:50%")
+			section.car_5(style="left:65%")
+			section.car_6(style="left:80%")

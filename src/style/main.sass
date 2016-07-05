@@ -1,0 +1,466 @@
+$redActiveMain: rgb(208, 46, 42)
+$redActiveAdd: rgb(217, 53, 46)
+$yellowActiveMain: rgb(227, 169, 0)
+$yellowActiveAdd: rgb(234, 184, 0)
+$greenActiveMain: rgb(50, 160, 85)
+$greenActiveAdd: rgb(53, 170, 93)
+$darkenCoeff: 30%
+$redDeactiveMain: darken($redActiveMain, $darkenCoeff)
+$redDeactiveAdd: darken($redActiveAdd, $darkenCoeff)
+$yellowDeactiveMain: darken($yellowActiveMain, $darkenCoeff)
+$yellowDeactiveAdd: darken($yellowActiveAdd, $darkenCoeff)
+$greenDeactiveMain: darken($greenActiveMain, $darkenCoeff)
+$greenDeactiveAdd: darken($greenActiveAdd, $darkenCoeff)
+
+*
+	margin: 0
+	padding: 0
+.redActiveBody
+	background-color: $redActiveMain !important
+.yellowActiveBody
+	background-color: $yellowActiveMain !important
+.greenActiveBody
+	background-color: $greenActiveMain !important
+body
+	font-size: .9em
+	background-color: rgb(26, 38, 47)
+	transition: all 1s;
+	overflow: hidden
+	
+	#road_1, #road_2, #road_3, #road_4, #road_5, #road_6, #road_7, #road_8, #road_9, #road_10
+		display: none
+
+	.road
+		position: absolute
+		background-color: rgb(41, 57, 76)
+		bottom: -5%
+		left: -5%
+		right: -5%
+		padding: 15% 0 5% 0
+		transform: rotateZ(-2deg)
+		@media (min-width: 320px) and (max-width: 500px)
+			padding: 60% 0 5% 0
+
+	.car_1
+		position: relative
+		//background-color: rgb(26, 38, 47)
+		left: 40%
+		width: 150px
+		padding-top: 10%
+		margin-top: -10%
+		text-indent: -9999px;
+		background-image: url(/img/car.svg)
+		background-size: 150px
+		background-repeat: repeat-x
+		//animation-name: carDriving
+		animation-duration: 5s
+		animation-iteration-count: infinite
+		@media (min-width: 320px) and (max-width: 500px)
+			padding-top: 50%
+			margin-top: -50%
+	.car_2
+		position: relative
+		//background-color: rgb(26, 38, 47)
+		left: 40%
+		width: 150px
+		padding-top: 10%
+		margin-top: -10%
+		text-indent: -9999px;
+		background-image: url(/img/minivan.svg)
+		background-size: 150px
+		background-repeat: repeat-x
+		//animation-name: carDriving
+		animation-duration: 5s
+		animation-iteration-count: infinite
+		@media (min-width: 320px) and (max-width: 500px)
+			padding-top: 50%
+			margin-top: -50%
+	.car_3
+		position: relative
+		//background-color: rgb(26, 38, 47)
+		left: 40%
+		width: 150px
+		padding-top: 10%
+		margin-top: -10%
+		text-indent: -9999px;
+		background-image: url(/img/car-3.svg)
+		background-size: 150px
+		background-repeat: repeat-x
+		//animation-name: carDriving
+		animation-duration: 5s
+		animation-iteration-count: infinite
+		@media (min-width: 320px) and (max-width: 500px)
+			padding-top: 50%
+			margin-top: -50%
+	.car_4
+		position: relative
+		//background-color: rgb(26, 38, 47)
+		left: 40%
+		width: 150px
+		padding-top: 10%
+		margin-top: -10%
+		text-indent: -9999px;
+		background-image: url(/img/taxi.svg)
+		background-size: 150px
+		background-repeat: repeat-x
+		//animation-name: carDriving
+		animation-duration: 5s
+		animation-iteration-count: infinite
+		@media (min-width: 320px) and (max-width: 500px)
+			padding-top: 50%
+			margin-top: -50%
+	.car_5
+		position: relative
+		//background-color: rgb(26, 38, 47)
+		left: 40%
+		width: 150px
+		padding-top: 10%
+		margin-top: -10%
+		text-indent: -9999px;
+		background-image: url(/img/car-5.svg)
+		background-size: 150px
+		background-repeat: repeat-x
+		//animation-name: carDriving
+		animation-duration: 5s
+		animation-iteration-count: infinite
+		@media (min-width: 320px) and (max-width: 500px)
+			padding-top: 50%
+			margin-top: -50%
+	.car_6
+		position: relative
+		//background-color: rgb(26, 38, 47)
+		left: 40%
+		width: 150px
+		padding-top: 10%
+		margin-top: -10%
+		text-indent: -9999px;
+		background-image: url(/img/car-6.svg)
+		background-size: 150px
+		background-repeat: repeat-x
+		animation-iteration-count: infinite
+		@media (min-width: 320px) and (max-width: 500px)
+			padding-top: 50%
+			margin-top: -50%
+	
+	#road_1.active
+		display: block
+		.car_1
+			animation-name: carDriving_10
+			animation-duration: 5s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1001;
+	#road_2.active
+		display: block
+		.car_1
+			animation-name: carDriving_10
+			animation-duration: 5s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1001;
+		.car_2
+			animation-name: carDriving_70
+			animation-duration: 4s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1002;
+	#road_3.active
+		display: block
+		.car_1
+			animation-name: carDriving_10
+			animation-duration: 12s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1002;
+		.car_2
+			animation-name: carDriving_45
+			animation-duration: 8s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1001;
+		.car_3
+			animation-name: carDriving_80
+			animation-duration: 5s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1003;
+	#road_4.active
+		display: block
+		.car_1
+			animation-name: carDriving_10
+			animation-duration: 10s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1002;
+		.car_2
+			animation-name: carDriving_30
+			animation-duration: 8s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1004;
+		.car_3
+			animation-name: carDriving_55
+			animation-duration: 5s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1001;
+		.car_4
+			animation-name: carDriving_80
+			animation-duration: 7s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1003;
+	#road_5.active
+		display: block
+		.car_1
+			animation-name: carDriving_10
+			animation-duration: 17s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1002;
+		.car_2
+			animation-name: carDriving_30
+			animation-duration: 15s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1005;
+		.car_3
+			animation-name: carDriving_50
+			animation-duration: 12s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1001;
+		.car_4
+			animation-name: carDriving_65
+			animation-duration: 10s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1003;
+		.car_5
+			animation-name: carDriving_80
+			animation-duration: 8s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1004;
+	#road_6.active
+		display: block
+		.car_1
+			//animation-name: carDriving_5
+			animation-duration: 18s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1002;
+		.car_2
+			//animation-name: carDriving_20
+			animation-duration: 20s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1005;
+		.car_3
+			//animation-name: carDriving_35
+			animation-duration: 16s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1005;
+		.car_4
+			//animation-name: carDriving_50
+			animation-duration: 15s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1003;
+		.car_5
+			//animation-name: carDriving_65
+			animation-duration: 13s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1004;
+		.car_6
+			//animation-name: carDriving_80
+			animation-duration: 10s
+			animatinon-timing-function: cubic-bezier(.90, .17, .90, .17)
+			z-index: 1006;
+	.trafficLight
+		clear: both
+		float: left
+		background-color: rgb(41, 57, 76)
+		box-shadow: 0 1px 0 0 rgb(26, 38, 47), 0 0 0 1px rgb(26, 38, 47)
+		min-width: 150px
+		max-width: 220px
+		width: 20%
+		border-radius: 50px
+		padding: 1%
+		margin: 0 1%
+		@media (min-width: 320px) and (max-width: 500px)
+			max-width: 250px
+			width: 80%
+			padding: 4%
+			margin: 0 2%
+	
+	.leftHolder
+		float: left
+		position: relative
+		background-color: rgb(26, 38, 47)
+		width: 3%
+		padding-top: 10%
+		margin-top: -8%
+		margin-left: 8%
+		@media (min-width: 320px) and (max-width: 500px)
+			width: 15%
+			padding-top: 15%
+			margin-top: -8%
+			margin-left: 20%
+
+	.lightContainer
+		position: relative
+		float: left
+		background-color: #edf1f5
+		box-shadow: 0 1px 0 0 rgb(26, 38, 47), 0 0 0 1px rgb(26, 38, 47)
+		width: 20%
+		padding-top: 20%
+		border-radius: 100%
+		margin: 0 6.66%
+		transform: rotateZ(45deg)
+		transition: all 1s;
+		.lightClip
+			position: relative
+			width: 50%;
+			padding-top: 100%
+			margin-top: -100%
+			overflow: hidden
+			.light
+				position: relative
+				width: 200%
+				padding-top: 200%
+				margin-top: -200%
+				border-radius: 100% 0 0 100%
+				transition: all 1s;
+	.redActiveMain
+		background-color: $redActiveMain !important
+	.redActiveAdd
+		background-color: $redActiveAdd !important
+	.yellowActiveMain
+		background-color: $yellowActiveMain !important
+	.yellowActiveAdd
+		background-color: $yellowActiveAdd !important
+	.greenActiveMain
+		background-color: $greenActiveMain !important
+	.greenActiveAdd
+		background-color: $greenActiveAdd !important
+		
+	.redDeactiveMain
+		background-color: $redDeactiveMain !important
+	.redDeactiveAdd
+		background-color: $redDeactiveAdd !important
+	.yellowDeactiveMain
+		background-color: $yellowDeactiveMain !important
+	.yellowDeactiveAdd
+		background-color: $yellowDeactiveAdd !important
+	.greenDeactiveMain
+		background-color: $greenDeactiveMain !important
+	.greenDeactiveAdd
+		background-color: $greenDeactiveAdd !important
+	.yellowFlashingMain
+		background-color: $yellowDeactiveMain
+		animation: yellowFlashMain 1s infinite ease-in-out
+	.yellowFlashingAdd
+		background-color: $yellowDeactiveAdd
+		animation: yellowFlashAdd 1s infinite ease-in-out
+
+@keyframes yellowFlashMain
+	from
+		background-color: $yellowDeactiveMain !important
+	50%
+		background-color: $yellowActiveMain
+	to
+		background-color: $yellowDeactiveMain !important
+@keyframes yellowFlashAdd
+	from
+		background-color: $yellowDeactiveAdd !important
+	50%
+		background-color: $yellowActiveAdd
+	to
+		background-color: $yellowDeactiveAdd !important
+@keyframes carDriving_5
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(0px) rotateZ(0deg)
+		left: 10%
+	100%
+		left: 100%
+@keyframes carDriving_10
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(0px) rotateZ(0deg)
+		left: 10%
+	100%
+		left: 100%
+
+@keyframes carDriving_20
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(0px) rotateZ(0deg)
+		left: 20%
+	100%
+		left: 100%
+
+@keyframes carDriving_30
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(30px) rotateZ(0deg)
+		left: 30%
+	100%
+		transform: translateY(30px)
+		left: 100%
+
+@keyframes carDriving_35
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(20px) rotateZ(0deg)
+		left: 35%
+	100%
+		transform: translateY(20px)
+		left: 100%
+
+@keyframes carDriving_45
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(-40px) rotateZ(0deg)
+		left: 45%
+	100%
+		transform: translateY(-40px)
+		left: 100%
+
+@keyframes carDriving_50
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(-30px) rotateZ(0deg)
+		left: 50%
+	100%
+		transform: translateY(-30px)
+		left: 100%
+
+@keyframes carDriving_55
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(-50px) rotateZ(0deg)
+		left: 55%
+	100%
+		transform: translateY(-50px)
+		left: 100%
+
+@keyframes carDriving_65
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(0px) rotateZ(0deg)
+		left: 55%
+	100%
+		left: 100%
+
+@keyframes carDriving_70
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(50px) rotateZ(0deg)
+		left: 70%
+	100%
+		transform: translateY(50px)
+		left: 100%
+
+@keyframes carDriving_80
+	0%
+		transform: translateY(300px) rotateZ(30deg)
+	20%
+		transform: translateY(20px) rotateZ(0deg)
+		left: 80%
+	100%
+		transform: translateY(20px)
+		left: 100%
