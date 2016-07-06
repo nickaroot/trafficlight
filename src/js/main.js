@@ -13,7 +13,7 @@ function parseStatus(url) {
 }
 
 $(document).ready(function(){
-	parseStatus('http://nickaroot.me/trafficlight/parse.php');
+	parseStatus('//nickaroot.me/trafficlight/parse.php');
 });
 
 function selectMoscow(json) {
@@ -47,7 +47,7 @@ function updateStatus(region) {
 		road = 6;
 	}
 
-	console.log(road);
+	console.log(level);
 
 	for(var i = 1; i <= 6; i++) {
 		if (i == road) {
@@ -89,5 +89,5 @@ function activateLight(color) {
 		}
 	});
 	console.log(color+" is activated");
-	setTimeout('parseStatus("http://nickaroot.me/trafficlight/parse.php")', updateInterval*1000);
+	setTimeout('parseStatus("//nickaroot.me/trafficlight/parse.php")', updateInterval*1000);
 }
